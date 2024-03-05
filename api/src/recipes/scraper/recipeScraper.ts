@@ -80,7 +80,7 @@ export class RecipeScraper {
             let keyString = key.replace('Content', '');
 
             // Convert camelCase to standard case
-            keyString = keyString.replace(/([A-Z])/g, ' $1').trim();
+            keyString = keyString.replace(/([A-Z])/g, ' $1').toLowerCase().trim();
             // Replace carbohydrate with carbohydrates
             if (keyString === 'carbohydrate') keyString = 'carbohydrates';
 

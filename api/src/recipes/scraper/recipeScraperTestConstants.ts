@@ -232,7 +232,7 @@ export const allRecipesRecipe = mockRecipe(
   '5 minutes',
   '25 minutes',
   '30 minutes',
-  '4',
+  undefined,
   undefined,
   '263 calories, 8 g carbohydrates, 63.7 mg cholesterol, 13.3 g fat, 0.7 g fiber, 27.1 g protein, 2.2 g saturated fat, 765.9 mg sodium',
 );
