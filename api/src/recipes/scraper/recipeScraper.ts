@@ -77,7 +77,14 @@ export class RecipeScraper {
         if (nutrition.hasOwnProperty(key)) {
           if (nutrition[key] === null || nutrition[key] === undefined || nutrition[key] === '') continue;
           if (nutrition[key].split(' ').length <= 2 && nutrition[key].split(' ')[1] !== 'calories') {
-            nutritionString += `${nutrition[key]} ${key.replace('Content', '')}, `
+            let keyString = key.replace('Content', '');
+            
+            // Convert camelCase to standard case
+            keyString = keyString.replace(/([A-Z])/g, ' $1').trim();
+            // Replace carbohydrate with carbohydrates
+            if (keyString === 'carbohydrate') keyString = 'carbhohydrates';
+
+            nutritionString += `${nutrition[key]} ${keyString}, `
           } else {
             nutritionString += `${nutrition[key]}, `
           }
