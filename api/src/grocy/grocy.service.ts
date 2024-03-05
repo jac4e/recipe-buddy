@@ -170,6 +170,7 @@ export class GrocyService {
       //   );
       // }
     } catch (e) {
+      this.logger.error(e.message);
       throw new HttpException(e.message, 500);
     }
     await this.recipesService.remove(addRecipeToGrocyDto._id);
