@@ -68,7 +68,10 @@ export class RecipeScraper {
   }
 
   parseRecipeNutrition = (nutrition) => {
-    if (typeof nutrition === 'object') return Object.values(nutrition).join(', ').slice(0, -2);
+    if (typeof nutrition === 'object') {
+      if (nutrition.hasOwnProperty('@type')) delete nutrition['@type'];
+      return Object.values(nutrition).join(', ').trim();
+    }
     return undefined;
   }
 
