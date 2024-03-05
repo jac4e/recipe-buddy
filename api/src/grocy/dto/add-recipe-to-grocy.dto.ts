@@ -11,4 +11,11 @@ export class AddRecipeToGrocyDto {
   steps: string[];
   ingredients: Ingredient[];
   imageUrl: string;
+  prepTime: string;
+  cookTime: string;
+  totalTime: string;
+  servings: string;
+  servingsSize: string;
+  nutrition: string;
+  url: string;
 }

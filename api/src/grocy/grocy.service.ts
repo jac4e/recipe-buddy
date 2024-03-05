@@ -4,6 +4,7 @@ import axios from 'axios';
 import { uid } from 'rand-token';
 import { UsersService } from '../users/users.service';
 import { RecipesService } from '../recipes/recipes.service';
+import { Recipe } from '../recipes/schemas/recipe.schema';
 
 const newRecipeSlug = '/api/objects/recipes';
 const newIngredientSlug = '/api/objects/recipes_pos';
@@ -29,9 +30,32 @@ export class GrocyService {
   parseSteps = (steps: string[]) =>
     `<ol>${steps.map((step) => `<li>${step}</li>`).join(' ')}</ol>`;
 
-  async createRecipeInGrocy(name: string, steps: string[]) {
+  // async createRecipeInGrocy(name: string, steps: string[]) {
+  async createRecipeInGrocy(recipe: AddRecipeToGrocyDto) {
     this.logger.log(name);
-    const parsedSteps = this.parseSteps(steps);
+    const parsedSteps = this.parseSteps(recipe.steps);
+
+    // Build description
+    const description = ``;
+    if (recipe.prepTime) {
+      description.concat(`<h4>Prep Time:</h4><p>${recipe.prepTime}</p>`);
+    }
+    if (recipe.cookTime) {
+      description.concat(`<h4>Cook Time:</h4><p>${recipe.cookTime}</p>`);
+    }
+    if (recipe.totalTime) {
+      description.concat(`<h4>Total Time:</h4><p>${recipe.totalTime}</p>`);
+    }
+    if (recipe.servings) {
+      description.concat(`<h4>Servings:</h4><p>${recipe.servings} (${recipe.servingsSize})</p>`);
+    }
+    description.concat(`<h3>Steps:</h3><p>${parsedSteps}</p>`);
+    if (recipe.nutrition){
+      description.concat(`<h4>Nutrition:</h4><p>${recipe.nutrition}</p>`);
+    }
+    description.concat(`<h4>Scraped From:</h4><p>${recipe.url}</p>`);
+    description.concat(`<h4>Full Ingredients:</h4><p>${recipe.ingredients}</p>`);
+
 
     try {
       const { data } = await axios.post(
@@ -126,8 +150,7 @@ export class GrocyService {
       this.grocyBase = userInfo.grocyBaseUrl;
       this.grocyKey = userInfo.grocyApiKey;
       const data = await this.createRecipeInGrocy(
-        addRecipeToGrocyDto.name,
-        addRecipeToGrocyDto.steps,
+        addRecipeToGrocyDto
       );
       const { created_object_id } = data;
       await this.associateIngredientsWithRecipe(
@@ -139,6 +162,13 @@ export class GrocyService {
           addRecipeToGrocyDto.imageUrl,
           created_object_id,
         );
+      // if (addRecipeToGrocyDto.servings) {
+      //   await this.recipesService.updateServings(
+      //     addRecipeToGrocyDto._id,
+      //     addRecipeToGrocyDto.servings,
+      //     addRecipeToGrocyDto.servingsSize,
+      //   );
+      // }
     } catch (e) {
       throw new HttpException(e.message, 500);
     }
