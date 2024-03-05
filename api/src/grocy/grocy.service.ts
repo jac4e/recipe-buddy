@@ -54,7 +54,7 @@ export class GrocyService {
       description += `<h4>Nutrition:</h4><p>${recipe.nutrition}</p>`;
     }
     description += `<h4>Scraped From:</h4><p>${recipe.url}</p>`;
-    description += `<h4>Full Ingredients:</h4><p>${recipe.ingredients}</p>`;
+    description += `<h4>Full Ingredients:</h4><p>${recipe.originalIngredients}</p>`;
 
 
     try {

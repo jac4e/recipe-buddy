@@ -160,6 +160,14 @@ export function AddToGrocyPage() {
           steps: recipe?.steps,
           imageUrl: recipe?.imageUrl,
           ingredients: completedIngredients,
+          originalIngredients: recipe?.ingredients,
+          url: recipe?.url,
+          prepTime: recipe?.prepTime,
+          cookTime: recipe?.cookTime,
+          totalTime: recipe?.totalTime,
+          servings: recipe?.servings,
+          servingsSize: recipe?.servingsSize,
+          nutrition: recipe?.nutrition,
         },
         {
           headers: {
