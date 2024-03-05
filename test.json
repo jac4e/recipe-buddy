@@ -1,0 +1,315 @@
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Article",
+            "@id": "https://www.budgetbytes.com/navy-bean-soup/#article",
+            "isPartOf": {
+                "@id": "https://www.budgetbytes.com/navy-bean-soup/"
+            },
+            "author": {
+                "name": "Marsha - Budget Bytes",
+                "@id": "https://www.budgetbytes.com/#/schema/person/8b72ee92e55fb267085d8acf39c2353c"
+            },
+            "headline": "Navy Bean Soup",
+            "datePublished": "2023-11-06T15:00:00+00:00",
+            "dateModified": "2023-12-11T13:32:43+00:00",
+            "wordCount": 1167,
+            "commentCount": 26,
+            "publisher": {
+                "@id": "https://www.budgetbytes.com/#organization"
+            },
+            "image": {
+                "@id": "https://www.budgetbytes.com/navy-bean-soup/#primaryimage"
+            },
+            "thumbnailUrl": "https://www.budgetbytes.com/wp-content/uploads/2023/11/Navy-Bean-Soup-Ladle.jpg",
+            "keywords": [
+                "Carrot",
+                "Celery",
+                "Chicken Broth",
+                "Garlic",
+                "Ham",
+                "Navy Beans",
+                "Olive Oil",
+                "Onion",
+                "Oregano",
+                "Rosemary",
+                "Smoked Paprika",
+                "Thyme"
+            ],
+            "articleSection": [
+                "Bean &amp; Grain Recipes",
+                "Bean Recipes",
+                "Egg Free Recipes",
+                "Fall Recipes",
+                "Gluten free Recipes",
+                "Meat Recipes",
+                "One Pot Meals",
+                "Pork Recipes",
+                "Recipes",
+                "Recipes under $10",
+                "Soup Recipes",
+                "Under $1.50 per serving",
+                "Winter Recipes"
+            ],
+            "inLanguage": "en-US",
+            "potentialAction": [
+                {
+                    "@type": "CommentAction",
+                    "name": "Comment",
+                    "target": [
+                        "https://www.budgetbytes.com/navy-bean-soup/#respond"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.budgetbytes.com/navy-bean-soup/",
+            "url": "https://www.budgetbytes.com/navy-bean-soup/",
+            "name": "Navy Bean Soup - Budget Bytes",
+            "isPartOf": {
+                "@id": "https://www.budgetbytes.com/#website"
+            },
+            "primaryImageOfPage": {
+                "@id": "https://www.budgetbytes.com/navy-bean-soup/#primaryimage"
+            },
+            "image": {
+                "@id": "https://www.budgetbytes.com/navy-bean-soup/#primaryimage"
+            },
+            "thumbnailUrl": "https://www.budgetbytes.com/wp-content/uploads/2023/11/Navy-Bean-Soup-Ladle.jpg",
+            "datePublished": "2023-11-06T15:00:00+00:00",
+            "dateModified": "2023-12-11T13:32:43+00:00",
+            "description": "This Navy Bean Soup with ham is hearty, cozy, super flavorful, and perfect on a chilly day. Easy to make and absolutely delicious!",
+            "breadcrumb": {
+                "@id": "https://www.budgetbytes.com/navy-bean-soup/#breadcrumb"
+            },
+            "inLanguage": "en-US",
+            "potentialAction": [
+                {
+                    "@type": "ReadAction",
+                    "target": [
+                        "https://www.budgetbytes.com/navy-bean-soup/"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "ImageObject",
+            "inLanguage": "en-US",
+            "@id": "https://www.budgetbytes.com/navy-bean-soup/#primaryimage",
+            "url": "https://www.budgetbytes.com/wp-content/uploads/2023/11/Navy-Bean-Soup-Ladle.jpg",
+            "contentUrl": "https://www.budgetbytes.com/wp-content/uploads/2023/11/Navy-Bean-Soup-Ladle.jpg",
+            "width": 1200,
+            "height": 900,
+            "caption": "Overhead view of a dutch oven pot full of navy bean soup with a ladle scooping some out."
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.budgetbytes.com/navy-bean-soup/#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Budget Bytes",
+                    "item": "https://www.budgetbytes.com/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Recipes",
+                    "item": "https://www.budgetbytes.com/category/recipes/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Soup Recipes",
+                    "item": "https://www.budgetbytes.com/category/recipes/soup/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "name": "Navy Bean Soup"
+                }
+            ]
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://www.budgetbytes.com/#website",
+            "url": "https://www.budgetbytes.com/",
+            "name": "Budget Bytes",
+            "description": "Delicious Recipes Designed for Small Budgets",
+            "publisher": {
+                "@id": "https://www.budgetbytes.com/#organization"
+            },
+            "potentialAction": [
+                {
+                    "@type": "SearchAction",
+                    "target": {
+                        "@type": "EntryPoint",
+                        "urlTemplate": "https://www.budgetbytes.com/?s={search_term_string}"
+                    },
+                    "query-input": "required name=search_term_string"
+                }
+            ],
+            "inLanguage": "en-US"
+        },
+        {
+            "@type": "Organization",
+            "@id": "https://www.budgetbytes.com/#organization",
+            "name": "Budget Bytes",
+            "url": "https://www.budgetbytes.com/",
+            "logo": {
+                "@type": "ImageObject",
+                "inLanguage": "en-US",
+                "@id": "https://www.budgetbytes.com/#/schema/logo/image/",
+                "url": "https://www.budgetbytes.com/wp-content/uploads/2020/11/budgetbytes_square_icon_transparent.png",
+                "contentUrl": "https://www.budgetbytes.com/wp-content/uploads/2020/11/budgetbytes_square_icon_transparent.png",
+                "width": 300,
+                "height": 300,
+                "caption": "Budget Bytes"
+            },
+            "image": {
+                "@id": "https://www.budgetbytes.com/#/schema/logo/image/"
+            },
+            "sameAs": [
+                "https://www.facebook.com/budgetbytes1/?ref=hl",
+                "https://twitter.com/Budget_Bytes",
+                "https://instagram.com/budgetbytes/",
+                "https://www.pinterest.com/budgetbytes/",
+                "https://www.youtube.com/channel/UC17vdVOZBVxTSDcldUBBlRg"
+            ]
+        },
+        {
+            "@type": "Person",
+            "@id": "https://www.budgetbytes.com/#/schema/person/8b72ee92e55fb267085d8acf39c2353c",
+            "name": "Marsha - Budget Bytes",
+            "image": {
+                "@type": "ImageObject",
+                "inLanguage": "en-US",
+                "@id": "https://www.budgetbytes.com/#/schema/person/image/",
+                "url": "https://www.budgetbytes.com/wp-content/uploads/2023/05/avatar_user_75428_1683571081-96x96.jpg",
+                "contentUrl": "https://www.budgetbytes.com/wp-content/uploads/2023/05/avatar_user_75428_1683571081-96x96.jpg",
+                "caption": "Marsha - Budget Bytes"
+            },
+            "description": "Marsha is a Nashville native and the food blogger behind MapleJubilee.com where she shares simple, healthy-ish recipes for busy families and home cooks. As a cancer survivor, Marsha’s goal is to share more recipes using whole foods and real ingredients! She enjoys practicing her food photography, spending time with her family and sharing her bubbly personality and food recipes on her YouTube channel.",
+            "url": "https://www.budgetbytes.com/author/marsha/"
+        },
+        {
+            "@type": "Recipe",
+            "name": "Navy Bean Soup",
+            "author": {
+                "@id": "https://www.budgetbytes.com/#/schema/person/8b72ee92e55fb267085d8acf39c2353c"
+            },
+            "description": "This Navy Bean Soup with ham is hearty, cozy, super flavorful, and perfect on a chilly day. Easy to make and absolutely delicious!",
+            "datePublished": "2023-11-06T09:00:00+00:00",
+            "image": [
+                "https://www.budgetbytes.com/wp-content/uploads/2023/11/Navy-Bean-Soup-Ladle.jpg",
+                "https://www.budgetbytes.com/wp-content/uploads/2023/11/Navy-Bean-Soup-Ladle-500x500.jpg",
+                "https://www.budgetbytes.com/wp-content/uploads/2023/11/Navy-Bean-Soup-Ladle-500x375.jpg",
+                "https://www.budgetbytes.com/wp-content/uploads/2023/11/Navy-Bean-Soup-Ladle-480x270.jpg"
+            ],
+            "recipeYield": [
+                "6",
+                "6 (1 1/3 cups each)"
+            ],
+            "prepTime": "PT15M",
+            "cookTime": "PT130M",
+            "totalTime": "PT145M",
+            "recipeIngredient": [
+                "1 lb.  dry navy beans ($1.29)",
+                "2 Tbsp olive oil ($0.24)",
+                "1  yellow onion ($0.32)",
+                "1  carrot ($0.15)",
+                "1  celery stalk ($0.25)",
+                "2  cloves garlic ($0.16)",
+                "1  ham hock ($3.65)",
+                "1/2 tsp  dried thyme ($0.05)",
+                "1/2 tsp dried oregano ($0.05)",
+                "1/2 tsp dried rosemary ($0.05)",
+                "1/2 tsp smoked paprika ($0.05)",
+                "1/4 tsp freshly cracked black pepper ($0.02)",
+                "6 cups chicken broth ($1.02)",
+                "1/4 tsp salt (or to taste) ($0.02)"
+            ],
+            "recipeInstructions": [
+                {
+                    "@type": "HowToStep",
+                    "text": "Start by soaking the dry navy beans overnight. Place the beans in a bowl, cover them with cold water, and place the bowl in the refrigerator. The next day, drain and rinse the beans.",
+                    "name": "Start by soaking the dry navy beans overnight. Place the beans in a bowl, cover them with cold water, and place the bowl in the refrigerator. The next day, drain and rinse the beans.",
+                    "url": "https://www.budgetbytes.com/navy-bean-soup/#wprm-recipe-87384-step-0-0"
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Dice the onion, the carrot, and the celery stalk. Mince the garlic cloves.",
+                    "name": "Dice the onion, the carrot, and the celery stalk. Mince the garlic cloves.",
+                    "url": "https://www.budgetbytes.com/navy-bean-soup/#wprm-recipe-87384-step-0-1"
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Sauté the onion, carrot, celery, and garlic in a large soup pot or Dutch oven with olive oil over medium heat, until the onions are soft and translucent.",
+                    "name": "Sauté the onion, carrot, celery, and garlic in a large soup pot or Dutch oven with olive oil over medium heat, until the onions are soft and translucent.",
+                    "url": "https://www.budgetbytes.com/navy-bean-soup/#wprm-recipe-87384-step-0-2"
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Add the soaked &amp; drained beans, ham hock, dried thyme, dried oregano, dried rosemary, smoked paprika, black pepper, and chicken broth to the pot. Gently stir to combine all the ingredients.",
+                    "name": "Add the soaked &amp; drained beans, ham hock, dried thyme, dried oregano, dried rosemary, smoked paprika, black pepper, and chicken broth to the pot. Gently stir to combine all the ingredients.",
+                    "url": "https://www.budgetbytes.com/navy-bean-soup/#wprm-recipe-87384-step-0-3"
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Place a lid on the pot and bring it up to a boil. Once boiling, turn the heat down to medium-low and let the soup simmer, stirring occasionally, until the beans are tender and begin to break down (approximately 1.5 hours). Flip the ham hock over once or twice, while the soup is simmering, so that it gets even exposure to the hot liquid.",
+                    "name": "Place a lid on the pot and bring it up to a boil. Once boiling, turn the heat down to medium-low and let the soup simmer, stirring occasionally, until the beans are tender and begin to break down (approximately 1.5 hours). Flip the ham hock over once or twice, while the soup is simmering, so that it gets even exposure to the hot liquid.",
+                    "url": "https://www.budgetbytes.com/navy-bean-soup/#wprm-recipe-87384-step-0-4"
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Once the beans are tender, remove the ham hock and pull the meat from the bone, then add the ham meat back to the soup.",
+                    "name": "Once the beans are tender, remove the ham hock and pull the meat from the bone, then add the ham meat back to the soup.",
+                    "url": "https://www.budgetbytes.com/navy-bean-soup/#wprm-recipe-87384-step-0-5"
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Now mash some of the beans against the side of the pot and stir the mashed beans back into the soup. Continue to simmer the soup uncovered for about 30 minutes to reduce some of the liquid and to thicken the soup further.",
+                    "name": "Now mash some of the beans against the side of the pot and stir the mashed beans back into the soup. Continue to simmer the soup uncovered for about 30 minutes to reduce some of the liquid and to thicken the soup further.",
+                    "url": "https://www.budgetbytes.com/navy-bean-soup/#wprm-recipe-87384-step-0-6"
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Taste the soup and add salt, if needed. I ended up adding 1/4 tsp of salt after tasting. The amount of salt needed will depend highly on the type of broth used. Serve hot with some crusty bread for dipping and enjoy!",
+                    "name": "Taste the soup and add salt, if needed. I ended up adding 1/4 tsp of salt after tasting. The amount of salt needed will depend highly on the type of broth used. Serve hot with some crusty bread for dipping and enjoy!",
+                    "url": "https://www.budgetbytes.com/navy-bean-soup/#wprm-recipe-87384-step-0-7"
+                }
+            ],
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "ratingCount": "10"
+            },
+            "recipeCategory": [
+                "Dinner",
+                "Lunch"
+            ],
+            "recipeCuisine": [
+                "American"
+            ],
+            "keywords": "Navy Bean Soup",
+            "nutrition": {
+                "@type": "NutritionInformation",
+                "servingSize": "1 serving",
+                "calories": "418 kcal",
+                "carbohydrateContent": "50 g",
+                "proteinContent": "27 g",
+                "fatContent": "13 g",
+                "sodiumContent": "1052 mg",
+                "fiberContent": "19 g"
+            },
+            "@id": "https://www.budgetbytes.com/navy-bean-soup/#recipe",
+            "isPartOf": {
+                "@id": "https://www.budgetbytes.com/navy-bean-soup/#article"
+            },
+            "mainEntityOfPage": "https://www.budgetbytes.com/navy-bean-soup/"
+        }
+    ]
+}

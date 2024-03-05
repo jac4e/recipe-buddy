@@ -12,6 +12,12 @@ export interface Recipe {
   imageUrl: string;
   ingredients: string[];
   steps: string[];
+  prepTime: string;
+  cookTime: string;
+  totalTime: string;
+  servings: string;
+  servingsSize: string;
+  nutrition: string;
 }
 
 export interface Ingredient {

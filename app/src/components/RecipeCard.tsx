@@ -75,6 +75,45 @@ export function RecipeCard({ recipe, getRecipes }: RecipeProps) {
     </div>
   );
 
+  const RecipeNutrition = ({ nutrition }: { nutrition: string }) => (
+    <div>
+      <Typography variant="h5">Nutrition</Typography>
+      <Typography>{nutrition}</Typography>
+    </div>
+  );
+
+  const RecipeServings = ({
+    servings,
+    servingsSize,
+  }: {
+    servings: string;
+    servingsSize: string;
+  }) => (
+    <div>
+      <Typography variant="h5">Servings</Typography>
+      <Typography>
+        {servings} {servingsSize}
+      </Typography>
+    </div>
+  );
+
+  const RecipeTimes = ({
+    prepTime,
+    cookTime,
+    totalTime,
+  }: {
+    prepTime: string;
+    cookTime: string;
+    totalTime: string;
+  }) => (
+    <div>
+      <Typography variant="h5">Times</Typography>
+      <Typography>Prep: {prepTime}</Typography>
+      <Typography>Cook: {cookTime}</Typography>
+      <Typography>Total: {totalTime}</Typography>
+    </div>
+  );
+
   const goToAddPage = () => {
     navigate(`/recipes/${recipe._id}`);
   };
@@ -96,6 +135,18 @@ export function RecipeCard({ recipe, getRecipes }: RecipeProps) {
       ) : null}
       <CardContent>
         <Collapse in={expanded}>
+          <RecipeServings
+            servings={recipe.servings}
+            servingsSize={recipe.servingsSize}
+          />
+          <RecipeTimes
+            prepTime={recipe.prepTime}
+            cookTime={recipe.cookTime}
+            totalTime={recipe.totalTime}
+          />
+          {recipe.nutrition ? (
+            <RecipeNutrition nutrition={recipe.nutrition} />
+          ) : null}
           <RecipeIngredients ingredients={recipe.ingredients} />
           <RecipeSteps steps={recipe.steps} />
         </Collapse>
