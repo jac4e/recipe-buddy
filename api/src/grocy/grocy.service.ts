@@ -36,25 +36,25 @@ export class GrocyService {
     const parsedSteps = this.parseSteps(recipe.steps);
 
     // Build description
-    const description = ``;
+    let description = ``;
     if (recipe.prepTime) {
-      description.concat(`<h4>Prep Time:</h4><p>${recipe.prepTime}</p>`);
+      description += `<h4>Prep Time:</h4><p>${recipe.prepTime}</p>`;
     }
     if (recipe.cookTime) {
-      description.concat(`<h4>Cook Time:</h4><p>${recipe.cookTime}</p>`);
+      description += `<h4>Cook Time:</h4><p>${recipe.cookTime}</p>`;
     }
     if (recipe.totalTime) {
-      description.concat(`<h4>Total Time:</h4><p>${recipe.totalTime}</p>`);
+      description += `<h4>Total Time:</h4><p>${recipe.totalTime}</p>`;
     }
     if (recipe.servings) {
-      description.concat(`<h4>Servings:</h4><p>${recipe.servings} (${recipe.servingsSize})</p>`);
+      description += `<h4>Servings:</h4><p>${recipe.servings} (${recipe.servingsSize})</p>`;
     }
-    description.concat(`<h3>Steps:</h3><p>${parsedSteps}</p>`);
+    description += `<h3>Steps:</h3><p>${parsedSteps}</p>`;
     if (recipe.nutrition){
-      description.concat(`<h4>Nutrition:</h4><p>${recipe.nutrition}</p>`);
+      description += `<h4>Nutrition:</h4><p>${recipe.nutrition}</p>`;
     }
-    description.concat(`<h4>Scraped From:</h4><p>${recipe.url}</p>`);
-    description.concat(`<h4>Full Ingredients:</h4><p>${recipe.ingredients}</p>`);
+    description += `<h4>Scraped From:</h4><p>${recipe.url}</p>`;
+    description += `<h4>Full Ingredients:</h4><p>${recipe.ingredients}</p>`;
 
 
     try {
