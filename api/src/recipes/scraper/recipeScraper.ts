@@ -38,14 +38,14 @@ export class RecipeScraper {
     if (Array.isArray(recipeYield) && recipeYield.length > 0 && typeof recipeYield[0] === 'string') {
       const yieldString = recipeYield[0];
 
-      const regex = /(\d+)(?:\s\((.*)\))?/;
+      const regex = /(\d+)(?:\s(.*))?/;
       const match = yieldString.match(regex);
 
       if (match) {
-        return match[1];
+        if (match[1]) return match[1].trim();
       }
     }
-    if (typeof recipeYield === 'number') return recipeYield.toString();
+    if (typeof recipeYield === 'number') return recipeYield.toString().trim();
     if (typeof recipeYield === 'string') return recipeYield;
 
     return undefined;
@@ -56,11 +56,11 @@ export class RecipeScraper {
     if (Array.isArray(recipeYield) && recipeYield.length > 1 && typeof recipeYield[0] === 'string') {
       const yieldString = recipeYield[1];
 
-      const regex = /(\d+)(?:\s\((.*)\))?/;
+      const regex = /(\d+)(?:\s(.*))?/;
       const match = yieldString.match(regex);
 
       if (match) {
-        if (match[2]) return match[2];
+        if (match[2]) return match[2].trim();
       }
     }
 
@@ -154,6 +154,7 @@ export class RecipeScraper {
 
       recipe.servings = this.parseRecipeYeild(recipeData.recipeYield);
       recipe.servingsSize = this.parseRecipeYeildSize(recipeData.recipeYield);
+      recipe.nutrition = this.parseRecipeNutrition(recipeData.nutrition);
 
 
       return recipe;
