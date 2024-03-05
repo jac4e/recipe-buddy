@@ -75,7 +75,7 @@ export const mockRecipe = (
   steps = [
     'Put the peach puree in a Champagne flute up to about 1/3 full and slowly top up with Prosecco.',
   ],
-  prepTime = undefined,
+  prepTime = '5 minutes',
   cookTime = undefined,
   totalTime = '5 minutes',
   servings = '6',

@@ -29,7 +29,7 @@ export class RecipeScraper {
       const match = time.match(regex);
       const hours = match[1] ? Number(match[1].slice(0, -1)) : 0;
       const minutes = match[2] ? Number(match[2].slice(0, -1)) : 0;
-      if (hours || minutes) return `${hours ? hours + ' hours' : ''}${minutes ? ' ' + minutes + ' minutes' : ''}`;
+      if (hours || minutes) return `${hours ? hours + ' hours' : ''}${minutes ? ' ' + minutes + ' minutes' : ''}`.trim();
     }
     return undefined;
   }
