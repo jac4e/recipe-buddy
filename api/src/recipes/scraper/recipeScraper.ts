@@ -78,11 +78,11 @@ export class RecipeScraper {
           if (nutrition[key] === null || nutrition[key] === undefined || nutrition[key] === '') continue;
           if (nutrition[key].split(' ').length <= 2 && nutrition[key].split(' ')[1] !== 'calories') {
             let keyString = key.replace('Content', '');
-            
+
             // Convert camelCase to standard case
             keyString = keyString.replace(/([A-Z])/g, ' $1').trim();
             // Replace carbohydrate with carbohydrates
-            if (keyString === 'carbohydrate') keyString = 'carbhohydrates';
+            if (keyString === 'carbohydrate') keyString = 'carbohydrates';
 
             nutritionString += `${nutrition[key]} ${keyString}, `
           } else {
