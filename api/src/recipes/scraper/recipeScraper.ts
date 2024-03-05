@@ -75,7 +75,7 @@ export class RecipeScraper {
       let nutritionString = '';
       for (const key in nutrition) {
         if (nutrition.hasOwnProperty(key)) {
-          if (nutrition[key].split(' ').length <= 2) {
+          if (nutrition[key].split(' ').length <= 2 && nutrition[key].split(' ')[1] !== 'calories') {
             nutritionString += `${nutrition[key]} ${key.replace('Content', '')}, `
           } else {
             nutritionString += `${nutrition[key]}, `
