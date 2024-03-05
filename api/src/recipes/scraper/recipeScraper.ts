@@ -24,8 +24,6 @@ export class RecipeScraper {
   };
 
   parseRecipeTime = (time) => {
-    // PT1H30M
-    // P0DT0H25M
     if (typeof time === 'string') {
       const regex = /P(?:\d+D)?T(\d+H)?(\d+M)/;
       const match = time.match(regex);
@@ -40,12 +38,9 @@ export class RecipeScraper {
     if (Array.isArray(recipeYield) && recipeYield.length > 0 && typeof recipeYield[0] === 'string') {
       const yieldString = recipeYield[0];
 
-      // Either
-      // 6
-      // or
-      // 6 (1/2 cup)
       const regex = /(\d+)(?:\s\((.*)\))?/;
       const match = yieldString.match(regex);
+
       if (match) {
         return match[1];
       }
@@ -61,14 +56,10 @@ export class RecipeScraper {
     if (Array.isArray(recipeYield) && recipeYield.length > 1 && typeof recipeYield[0] === 'string') {
       const yieldString = recipeYield[1];
 
-      // Either
-      // 6
-      // or
-      // 6 (1/2 cup)
       const regex = /(\d+)(?:\s\((.*)\))?/;
       const match = yieldString.match(regex);
+
       if (match) {
-        // Check if match[2] exists
         if (match[2]) return match[2];
       }
     }
@@ -77,7 +68,6 @@ export class RecipeScraper {
   }
 
   parseRecipeNutrition = (nutrition) => {
-    // Check if nutrition is an object
     if (typeof nutrition === 'object') return Object.values(nutrition).join(', ').slice(0, -2);
     return undefined;
   }
