@@ -35,6 +35,8 @@ export class RecipeScraper {
   }
 
   parseRecipeYeild = (recipeYield) => {
+    if (typeof recipeYield === 'number') return recipeYield.toString().trim();
+    if (typeof recipeYield === 'string') recipeYield = [recipeYield];
     if (Array.isArray(recipeYield) && recipeYield.length > 0 && typeof recipeYield[0] === 'string') {
       const yieldString = recipeYield[0];
 
@@ -45,8 +47,6 @@ export class RecipeScraper {
         if (match[1]) return match[1].trim();
       }
     }
-    if (typeof recipeYield === 'number') return recipeYield.toString().trim();
-    if (typeof recipeYield === 'string') return recipeYield;
 
     return undefined;
   }
