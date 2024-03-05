@@ -19,6 +19,24 @@ export class Recipe {
 
   @Prop({ required: false })
   steps: string[];
+
+  @Prop({ required: false })
+  prepTime: string;
+
+  @Prop({ required: false })
+  cookTime: string;
+
+  @Prop({ required: false })
+  totalTime: string;
+
+  @Prop({ required: false })
+  servings: string;
+
+  @Prop({ required: false })
+  servingsSize: string;
+
+  @Prop({ required: false })
+  nutrition: string;
 }
 
 export const RecipeSchema = SchemaFactory.createForClass(Recipe);
