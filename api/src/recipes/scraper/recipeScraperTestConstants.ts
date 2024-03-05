@@ -75,12 +75,24 @@ export const mockRecipe = (
   steps = [
     'Put the peach puree in a Champagne flute up to about 1/3 full and slowly top up with Prosecco.',
   ],
+  prepTime = undefined,
+  cookTime = undefined,
+  totalTime = '5 minutes',
+  servings = '6',
+  servingsSize = undefined,
+  nutrition = '143 calories, 18 grams carbohydrates, 18 grams sugar, 0.7 grams fiber, 0.7 grams protein',
 ): Recipe => ({
   url,
   name,
   imageUrl,
   ingredients,
   steps,
+  prepTime,
+  cookTime,
+  totalTime,
+  servings,
+  servingsSize,
+  nutrition,
 });
 
 export const allRecipesDomString =
@@ -217,6 +229,12 @@ export const allRecipesRecipe = mockRecipe(
     'Stir together water, white wine, and gravy packet in a small bowl and pour into the skillet.',
     'Bring liquid to a simmer, cover, reduce heat to medium, and cook for 5 minutes. Turn chicken breasts and continue cooking until chicken is no longer pink in the center and the juices run clear, about 5 more minutes. An instant-read thermometer inserted into the center should read at least 165 degrees F (74 degrees C).',
   ],
+  '5 minutes',
+  '25 minutes',
+  '30 minutes',
+  '4',
+  undefined,
+  '263 calories, 8 g carbohydrates, 63.7 mg cholesterol, 13.3 g fat, 0.7 g fiber, 27.1 g protein, 2.2 g saturated fat, 765.9 mg sodium',
 );
 
 export const yoastDomString =
@@ -421,4 +439,10 @@ export const yoastRecipe = mockRecipe(
     'Roll into 1&#8243; balls. Serve immediately.',
     '*** Can be stored in an airtight container in the refrigerator for up to 4 days. ***',
   ],
+  '10 minutes',
+  undefined,
+  '10 minutes',
+  '15',
+  'Energy Balls',
+  '111 calories, 2 g sugar, 80 mg sodium, 4 g fat, 1 g saturated fat, 9 g carbohydrates, 3 g fiber, 5 g protein, 0 mg cholesterol',
 );
