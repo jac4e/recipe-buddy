@@ -32,7 +32,7 @@ export class GrocyService {
 
   // async createRecipeInGrocy(name: string, steps: string[]) {
   async createRecipeInGrocy(recipe: AddRecipeToGrocyDto) {
-    this.logger.log(name);
+    this.logger.log(recipe.name);
     const parsedSteps = this.parseSteps(recipe.steps);
 
     // Build description
@@ -61,7 +61,7 @@ export class GrocyService {
       const { data } = await axios.post(
         `${this.grocyBase}${newRecipeSlug}`,
         {
-          name: name,
+          name: recipe.name,
           description: parsedSteps,
         },
         {
