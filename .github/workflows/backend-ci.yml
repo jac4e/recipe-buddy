@@ -5,7 +5,7 @@ name: Backend CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master, feature/**, bugfix/** ]
     paths:
       - api/**
   pull_request:
