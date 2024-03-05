@@ -70,7 +70,19 @@ export class RecipeScraper {
   parseRecipeNutrition = (nutrition) => {
     if (typeof nutrition === 'object') {
       if (nutrition.hasOwnProperty('@type')) delete nutrition['@type'];
-      return Object.values(nutrition).join(', ').trim();
+      if (nutrition.hasOwnProperty('servingSize')) delete nutrition['servingSize'];
+      // Join all the values together and remove any leading or trailing whitespace, adding the key after the value if the value is ony a number and unit
+      let nutritionString = '';
+      for (const key in nutrition) {
+        if (nutrition.hasOwnProperty(key)) {
+          if (nutrition[key].split(' ').length <= 2) {
+            nutritionString += `${nutrition[key]} ${key.replace('Content', '')}, `
+          } else {
+            nutritionString += `${nutrition[key]}, `
+          }
+        }
+      }
+      return nutritionString.trim().slice(0, -1);
     }
     return undefined;
   }
