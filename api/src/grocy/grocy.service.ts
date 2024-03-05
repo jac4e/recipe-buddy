@@ -62,7 +62,7 @@ export class GrocyService {
         `${this.grocyBase}${newRecipeSlug}`,
         {
           name: recipe.name,
-          description: parsedSteps,
+          description: description,
         },
         {
           headers: {
