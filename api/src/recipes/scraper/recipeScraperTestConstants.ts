@@ -11,6 +11,33 @@ export const mockNodeList = (
   );
 };
 
+
+export const mockRecipe = (
+  url,
+  name,
+  imageUrl,
+  ingredients,
+  steps,
+  prepTime,
+  cookTime,
+  totalTime,
+  servings,
+  servingsSize,
+  nutrition,
+): Recipe => ({
+  url,
+  name,
+  imageUrl,
+  ingredients,
+  steps,
+  prepTime,
+  cookTime,
+  totalTime,
+  servings,
+  servingsSize,
+  nutrition,
+});
+
 export const belliniMetadataObject = {
   '@context': 'https://schema.org',
   '@id': 'https://www.bbcgoodfood.com/recipes/bellini#Recipe',
@@ -67,33 +94,22 @@ export const belliniMetadataObject = {
   totalTime: 'PT5M',
 };
 
-export const mockRecipe = (
-  url = 'https://www.bbcgoodfood.com/recipes/bellini',
-  name = 'Bellini',
-  imageUrl = 'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/bellini-b049342.jpg',
-  ingredients = ['500ml peach purée or peach nectar', '1 bottle prosecco'],
-  steps = [
+
+export const belliniRecipe = mockRecipe(
+  'https://www.bbcgoodfood.com/recipes/bellini',
+  'Bellini',
+  'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/bellini-b049342.jpg',
+  ['500ml peach purée or peach nectar', '1 bottle prosecco'],
+  [
     'Put the peach puree in a Champagne flute up to about 1/3 full and slowly top up with Prosecco.',
   ],
-  prepTime = '5 minutes',
-  cookTime = undefined,
-  totalTime = '5 minutes',
-  servings = '6',
-  servingsSize = undefined,
-  nutrition = '143 calories, 18 grams carbohydrates, 18 grams sugar, 0.7 grams fiber, 0.7 grams protein',
-): Recipe => ({
-  url,
-  name,
-  imageUrl,
-  ingredients,
-  steps,
-  prepTime,
-  cookTime,
-  totalTime,
-  servings,
-  servingsSize,
-  nutrition,
-});
+  '5 minutes',
+  undefined,
+  '5 minutes',
+  '6',
+  undefined,
+  '143 calories, 18 grams carbohydrates, 18 grams sugar, 0.7 grams fiber, 0.7 grams protein'
+);
 
 export const allRecipesDomString =
   '<script type="application/ld+json"> [ { "@context": "http://schema.org", "@type": "BreadcrumbList", "itemListElement": [ { "@type": "ListItem", "position": 1, "item": { "@id": "https://www.allrecipes.com/", "name": "Home", "image": null } }, { "@type": "ListItem", "position": 2, "item": { "@id": "https://www.allrecipes.com/recipes/", "name": "Recipes", "image": null } }, { "@type": "ListItem", "position": 3, "item": { "@id": "https://www.allrecipes.com/recipes/92/meat-and-poultry/", "name": "Meat and Poultry", "image": null } }, { "@type": "ListItem", "position": 4, "item": { "@id": "https://www.allrecipes.com/recipes/201/meat-and-poultry/chicken/", "name": "Chicken", "image": null } }, { "@type": "ListItem", "position": 5, "item": { "@id": "https://www.allrecipes.com/recipes/659/meat-and-poultry/chicken/chicken-breasts/", "name": "Breast", "image": null } }, { "@type": "ListItem", "position": 6, "item": { "@id": "https://www.allrecipes.com/recipes/1981/meat-and-poultry/chicken/chicken-breasts/pan-fried/", "name": "Pan-Fried", "image": null } } ] }, { "@context": "http://schema.org", "@type": "Recipe", "mainEntityOfPage": "https://www.allrecipes.com/recipe/8379848/pan-fried-chicken-breast-with-mushroom-gravy/", "name": "Pan-Fried Chicken Breast with Mushroom Gravy", "image": { "@type": "ImageObject", "url": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F43%2F-0001%2F11%2F30%2F8842462-2000.jpg", "width": 1500, "height": 2000 }, "datePublished": "2022-04-15T14:22:32.000Z", "description": "Simple ingredients that you have in your pantry. This is an easy dish that tastes great.", "prepTime": "P0DT0H5M", "cookTime": "P0DT0H25M", "totalTime": "P0DT0H30M", "recipeIngredient": [ "4 (5 ounce) chicken breasts", "1 teaspoon onion powder", "½ teaspoon salt", "½ teaspoon freshly ground black pepper", "3 tablespoons olive oil", "1 (8 ounce) package sliced fresh mushrooms", "2 cloves garlic, sliced", "¾ cup water", "¼ cup dry white wine", "1 (1.25 ounce) envelope dry chicken gravy mix" ], "recipeInstructions": [ { "@type": "HowToStep", "text": "Sprinkle both sides of the chicken breasts with onion powder, salt, and pepper.\\n" }, { "@type": "HowToStep", "text": "Heat oil in a large skillet over medium-high heat. Add chicken and cook until golden brown, about 5 minutes per side.\\n" }, { "@type": "HowToStep", "text": "Add garlic and mushrooms and cook until mushrooms have released their liquid and are reduced in size, about 5 minutes.\\n" }, { "@type": "HowToStep", "text": "Stir together water, white wine, and gravy packet in a small bowl and pour into the skillet.\\n" }, { "@type": "HowToStep", "text": "Bring liquid to a simmer, cover, reduce heat to medium, and cook for 5 minutes. Turn chicken breasts and continue cooking until chicken is no longer pink in the center and the juices run clear, about 5 more minutes. An instant-read thermometer inserted into the center should read at least 165 degrees F (74 degrees C).\\n" } ], "recipeCategory": [ "Pan Fried Chicken Breasts" ], "recipeCuisine": [], "author": [ { "@type": "Person", "name": "FrackFamily5 CACT" } ], "aggregateRating": { "@type": "AggregateRating", "ratingValue": 4, "ratingCount": 2, "itemReviewed": "Pan-Fried Chicken Breast with Mushroom Gravy", "bestRating": "5", "worstRating": "1" }, "nutrition": { "@type": "NutritionInformation", "calories": "263 calories", "carbohydrateContent": "8 g", "cholesterolContent": "63.7 mg", "fatContent": "13.3 g", "fiberContent": "0.7 g", "proteinContent": "27.1 g", "saturatedFatContent": "2.2 g", "servingSize": null, "sodiumContent": "765.9 mg", "sugarContent": null, "transFatContent": null, "unsaturatedFatContent": null }, "review": [ { "@type": "Review", "datePublished": "2022-04-20T12:29:10.818Z", "reviewBody": "It came out delicious! The chicken was very tender. The only two changes I made was to use a brown gravy mix because of what I had on hand and to replace white wine with chicken broth.", "reviewRating": { "@type": "Rating", "worstRating": "1", "bestRating": "5", "ratingValue": 5 }, "author": { "@type": "Person", "name": "ruthncls", "image": null, "sameAs": null } } ] } ]</script>';

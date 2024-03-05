@@ -6,6 +6,7 @@ import {
   allRecipesRecipe,
   allRecipesUrl,
   belliniMetadataObject,
+  belliniRecipe,
   belliniUrl,
   mockNodeList,
   mockRecipe,
@@ -94,7 +95,7 @@ describe('RecipeScraper', () => {
       .mockResolvedValueOnce(mockNodeList());
 
     await expect(scraper.hydrateRecipe(belliniUrl)).resolves.toEqual(
-      mockRecipe(),
+      belliniRecipe,
     );
   });
 

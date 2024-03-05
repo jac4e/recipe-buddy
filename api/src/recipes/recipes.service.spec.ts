@@ -5,20 +5,46 @@ import { getModelToken } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { RecipeScraper } from './scraper/recipeScraper';
 
-const mockRecipe = (
-  url = 'https://www.bbcgoodfood.com/recipes/bellini',
-  name = 'Bellini',
-  imageUrl = 'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/bellini-b049342.jpg?quality=90&webp=true&resize=300,272',
-  ingredients = ['500ml peach purée or peach nectar', '1 bottle prosecco'],
-  steps = [
-    'Put the peach puree in a Champagne flute up to about 1/3 full and slowly top up with Prosecco.',
-  ],
+// const mockRecipe = (
+//   url = 'https://www.bbcgoodfood.com/recipes/bellini',
+//   name = 'Bellini',
+//   imageUrl = 'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/bellini-b049342.jpg?quality=90&webp=true&resize=300,272',
+//   ingredients = ['500ml peach purée or peach nectar', '1 bottle prosecco'],
+//   steps = [
+//     'Put the peach puree in a Champagne flute up to about 1/3 full and slowly top up with Prosecco.',
+//   ],
+// ): Recipe => ({
+//   url,
+//   name,
+//   imageUrl,
+//   ingredients,
+//   steps,
+// });
+
+export const mockRecipe = (
+  url,
+  name,
+  imageUrl,
+  ingredients,
+  steps,
+  prepTime,
+  cookTime,
+  totalTime,
+  servings,
+  servingsSize,
+  nutrition,
 ): Recipe => ({
   url,
   name,
   imageUrl,
   ingredients,
   steps,
+  prepTime,
+  cookTime,
+  totalTime,
+  servings,
+  servingsSize,
+  nutrition,
 });
 
 const mockRecipeDoc = (mock?: Partial<Recipe>): Partial<RecipeDocument> => ({
@@ -34,9 +60,33 @@ const mockRecipeDoc = (mock?: Partial<Recipe>): Partial<RecipeDocument> => ({
   steps: mock?.steps || [
     'Put the peach puree in a Champagne flute up to about 1/3 full and slowly top up with Prosecco.',
   ],
+  prepTime: mock?.prepTime || '5 minutes',
+  cookTime: mock?.cookTime || undefined,
+  totalTime: mock?.totalTime || '5 minutes',
+  servings: mock?.servings || '6',
+  servingsSize: mock?.servingsSize || undefined,
+  nutrition:
+    mock?.nutrition ||
+    '143 calories, 18 grams carbohydrates, 18 grams sugar, 0.7 grams fiber, 0.7 grams protein',
 });
 
-const recipeArray = [mockRecipe()];
+const belliniRecipe =  mockRecipe(
+  'https://www.bbcgoodfood.com/recipes/bellini',
+  'Bellini',
+  'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/bellini-b049342.jpg?quality=90&webp=true&resize=300,272',
+  ['500ml peach purée or peach nectar', '1 bottle prosecco'],
+  [
+    'Put the peach puree in a Champagne flute up to about 1/3 full and slowly top up with Prosecco.',
+  ],
+  '5 minutes',
+  undefined,
+  '5 minutes',
+  '6',
+  undefined,
+  '143 calories, 18 grams carbohydrates, 18 grams sugar, 0.7 grams fiber, 0.7 grams protein'
+);
+
+const recipeArray = [belliniRecipe];
 
 const recipeDocArray = [mockRecipeDoc()];
 
@@ -52,8 +102,8 @@ describe('RecipesService', () => {
         {
           provide: getModelToken('Recipe'),
           useValue: {
-            new: jest.fn().mockResolvedValue(mockRecipe()),
-            constructor: jest.fn().mockResolvedValue(mockRecipe()),
+            new: jest.fn().mockResolvedValue(belliniRecipe),
+            constructor: jest.fn().mockResolvedValue(belliniRecipe),
             find: jest.fn(),
             exec: jest.fn(),
           },
